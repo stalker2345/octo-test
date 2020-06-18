@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, Container, HeaderRow, Footer } from "./components/index";
+import { Wrapper, Container, HeaderRow, FooterRow } from "./components/index";
 
 function App() {
   return (
@@ -12,9 +12,7 @@ function App() {
       <div className="content"></div>
       <div className="footer">
         <Container>
-          <Footer>
-            <></>
-          </Footer>
+          <FooterRow></FooterRow>
         </Container>
       </div>
     </Wrapper>

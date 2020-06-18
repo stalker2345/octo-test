@@ -6,6 +6,9 @@ import { indents, colors, fonts } from "../../styles/allstyles.js";
 const HeaderColumnItem = styled.div<DefaultThemeHeader>`
   
 color: ${colors.blue.slice(-8)}
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   ${fonts.fontSyze(4)}
   box-shadow: 0 0 0 black;
   margin-left: ${(props) => props.marginLeft && indents[6]};

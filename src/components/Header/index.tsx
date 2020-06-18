@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { colors, flex, indents } from "../../styles/allstyles.js";
 
 const Header = styled.div<{ children: ReactNode }>`
-flex: 1 1 auto;  
+
 width: 100%;
   height: 80px;
   ${colors.white}

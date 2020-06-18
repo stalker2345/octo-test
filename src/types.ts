@@ -16,11 +16,21 @@ declare module "styled-components" {
     // };
   }
   export interface DefaultThemeHeader extends DefaultTheme {
-    cursor: string;
+    cursor?: string;
     marginLeft?: boolean;
+  }
+
+  export interface DefaultThemeBlock extends DefaultTheme {
+    width?: string;
+    height?: string;
+    flexDirection?: string;
+    justify: string;
+    align: string;
   }
 }
 
 export interface IButton {
   size?: "Big";
 }
+
+export interface IWebStructure {}
