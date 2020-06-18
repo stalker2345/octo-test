@@ -1,9 +1,24 @@
 import React from "react";
-
-import "./App.css";
+import { Wrapper, Container, HeaderRow, Footer } from "./components/index";
 
 function App() {
-  return <></>;
+  return (
+    <Wrapper>
+      <div className="header">
+        <Container>
+          <HeaderRow></HeaderRow>
+        </Container>
+      </div>
+      <div className="content"></div>
+      <div className="footer">
+        <Container>
+          <Footer>
+            <></>
+          </Footer>
+        </Container>
+      </div>
+    </Wrapper>
+  );
 }
 
 export default App;
