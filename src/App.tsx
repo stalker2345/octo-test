@@ -1,18 +1,12 @@
 import React from "react";
-import {
-  Wrapper,
-  Container,
-  HeaderRow,
-  FooterRow,
-  Testing,
-} from "./components/index";
+import { Wrapper, Container, HeaderRow, FooterRow } from "./components/index";
 
 function App() {
   return (
     <Wrapper>
       <div className="header">
         <Container>
-          <Testing></Testing>
+          <HeaderRow></HeaderRow>
         </Container>
       </div>
       <div className="content"></div>
