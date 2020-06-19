@@ -7,3 +7,4 @@ export { default as Block } from "./Block";
 export { default as HeaderColumnItem } from "./Header/HeaderColumnItem";
 export { default as HeaderRow } from "../modules/HeaderRow";
 export { default as FooterRow } from "../modules/FooterRow";
+export { default as Testing } from "../modules/HeaderRow";

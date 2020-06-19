@@ -33,4 +33,14 @@ export interface IButton {
   size?: "Big";
 }
 
-export interface IWebStructure {}
+export interface IInput {}
+
+export interface IWebStructure {
+  width?: string;
+  height?: string;
+  flexDirection?: string;
+  justify: string;
+  align: string;
+  type: string;
+  children: Array<null | IWebStructure | IInput | IButton>;
+}

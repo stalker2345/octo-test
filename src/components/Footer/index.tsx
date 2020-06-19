@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { colors, flex, indents } from "../../styles/allstyles.js";
 
 const Footer = styled.div<{ children: ReactNode }>`
-flex: 1 1 auto;  
+padding-top: ${indents[5]};
+ 
 width: 100%;
   height: 236px;
   ${colors.white}

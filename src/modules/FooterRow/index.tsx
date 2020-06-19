@@ -25,7 +25,7 @@ export default function FooterRow() {
                 justify={children.justifyContent}
                 align={children.alignItems}
               >
-                {children.children &&
+                {
                   //@ts-ignore
                   children.children.map((children, index) => (
                     <Block
@@ -37,7 +37,8 @@ export default function FooterRow() {
                     >
                       {<HeaderColumnItem>{children.message}</HeaderColumnItem>}
                     </Block>
-                  ))}
+                  ))
+                }
               </Block>
             ))) ||
             block.children[0]}
