@@ -1,8 +1,36 @@
 import React from "react";
-import { Block } from "../components";
+import { Block, HeaderColumnItem } from "../components";
 //import { footer } from "../../styles/allstyles";
 
 function GenerateStructure({ Component, obj }) {
+  const generatorSwitch = (obj) => {
+    // if (obj.type === "block") {
+    //   generateStructure(obj.children);
+    // } else if (obj.type === "text") {
+    //   return <HeaderColumnItem>{obj.message}</HeaderColumnItem>;
+    // }
+    const x = (obj) => {
+      return (
+        <Block
+          height={obj.height}
+          width={obj.width}
+          justify={obj.justifyContent}
+          align={obj.alignItems}
+          flexDirection={obj.flexDirection}
+          onClick={() => {}}
+        ></Block>
+      );
+    };
+    switch (obj.type) {
+      case "block":
+        generateStructure(obj.children);
+        break;
+      case "text":
+        x(obj);
+        break;
+    }
+  };
+
   const generateStructure = (obj) => {
     return (
       <>
@@ -16,9 +44,7 @@ function GenerateStructure({ Component, obj }) {
             flexDirection={children.flexDirection}
             onClick={() => {}}
           >
-            {children.children &&
-              !(typeof children.children[0] === "string") &&
-              generateStructure(children.children)}
+            {generatorSwitch(children)}
           </Block>
         ))}
       </>

@@ -1,3 +1,4 @@
+// import { IWebStructure } from "./types";
 import { ReactNode } from "react";
 // import * as React from "react";
 // import { ThemedStyledFunction } from "styled-components";
@@ -30,17 +31,39 @@ declare module "styled-components" {
 }
 
 export interface IButton {
-  size?: "Big";
+  size?: string;
+  primary: boolean;
+  hover: string;
+  type: "button";
 }
 
 export interface IInput {}
 
-export interface IWebStructure {
+type display = "block" | "flex" | "inline-block";
+//type type = "block" | "text";
+
+interface IText extends IBlock {
+  type: "text";
+  margin?: string;
+  message?: string;
+  textColor: string;
+}
+
+interface IBlock {
+  readonly display: display;
   width?: string;
   height?: string;
   flexDirection?: string;
-  justify: string;
-  align: string;
-  type: string;
-  children: Array<null | IWebStructure | IInput | IButton>;
+  justifyContent: string;
+  alignItems: string;
+  onClick: string;
+  padding?: string;
+  margin?: string;
+}
+
+interface IFlexBlock {}
+
+export interface IWebStructure extends IBlock {
+  type: "block";
+  children?: Array<IWebStructure | IInput | IButton | IText>;
 }
